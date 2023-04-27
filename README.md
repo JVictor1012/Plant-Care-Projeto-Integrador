@@ -28,6 +28,7 @@ Neste projeto, está planejado fazer a integração da disciplina de desenvolvim
 
     
     section Defesa
+    Ajustes Finais :z1, after b2, 5d
     Preparação da Apresentação :p1, after b2, 10d
     Ensaio da apresentação :p2, after p1, 7d
     Apresentação e entrega  :milestone, after p2, 1d
