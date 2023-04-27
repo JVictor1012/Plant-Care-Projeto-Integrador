@@ -16,7 +16,7 @@ Neste projeto, está planejado fazer a integração da disciplina de desenvolvim
     dateFormat  YYYY-MM-DD
     section Pesquisa 
     Idealização do Projeto      :a1, 2023-04-01, 15d
-    Documentação                :a2.2, after a2, 15d
+    Documentação                :a2.2, after a1, 15d
     Escolha de tecnologias      :a2, after a1, 10d
     
     section App Mobile
