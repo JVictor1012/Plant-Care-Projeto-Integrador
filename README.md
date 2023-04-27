@@ -19,7 +19,7 @@ Neste projeto, está planejado fazer a integração da disciplina de desenvolvim
     Escolha de tecnologias      :a2, after a1, 10d
     
     section App Mobile
-    Criação de telas e modelagem      :b1, after a2 , 15d
+    Criação de telas e modelagem      :b1, after a2 , 10d
     Programação do Aplicativo         :b2, after b1 , 30d
     
     section Arduino
@@ -28,7 +28,7 @@ Neste projeto, está planejado fazer a integração da disciplina de desenvolvim
 
     
     section Defesa
-    Preparação da Apresentação :p1, after c1, 10d
+    Preparação da Apresentação :p1, after b2, 10d
     Ensaio da apresentação :p2, after p1, 7d
     Apresentação e entrega  :milestone, after p2, 1d
 ```
