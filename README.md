@@ -10,7 +10,7 @@ Projeto para a disciplina de Projeto Integrador 2
     section Documentação 
     Idealização do Projeto      :a1, 2023-04-01, 30d
     Desenvolvimento do App   :a2, after a1  , 30d
-    Desenvolvimento do Arduino   :a3, after a2  , 30d
+    Desenvolvimento do Arduino   :a3, 2023-05-15 , 30d
     
     
     
