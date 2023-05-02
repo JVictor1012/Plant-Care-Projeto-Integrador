@@ -1,5 +1,5 @@
 # Plant-Care-Projeto-Integrador
-Projeto para a disciplina de Projeto Integrador 2
+Projeto para a disciplina de Projeto Integrador II
 
 A ideia é criar um aplicativo de celular que se comunique com um sensor de umidade instalado no solo de uma planta doméstica.
 O objetivo é analisar e criar uma rotina de cuidados com as plantas.
