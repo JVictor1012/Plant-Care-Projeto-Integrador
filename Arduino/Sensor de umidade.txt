@@ -1,0 +1,59 @@
+// Configuração do switch
+#define SWITCH_PIN 2
+
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+void setup_wifi() {
+  delay(10);
+  // Conexão Wi-Fi
+  WiFi.begin(ssid, password);
+  
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+  }
+}
+
+void reconnect() {
+  // Loop até conectar-se ao servidor MQTT
+  while (!client.connected()) {
+    if (client.connect("NodeMCU_Client", mqtt_username, mqtt_password)) {
+      // Assinando os tópicos para receber mensagens
+      client.subscribe(seco_topic);
+      client.subscribe(umido_topic);
+    } else {
+      delay(5000);
+    }
+  }
+}
+
+void setup() {
+  // Inicialização da conexão Wi-Fi
+  setup_wifi();
+  // Configuração do servidor MQTT
+  client.setServer(mqtt_server, mqtt_port);
+
+  // Configuração do pino do switch como entrada
+  pinMode(SWITCH_PIN, INPUT);
+  // Habilita pull-up interno para o pino do switch
+  digitalWrite(SWITCH_PIN, HIGH);
+}
+
+void loop() {
+  if (!client.connected()) {
+    reconnect();
+  }
+
+  // Verifica o estado do switch
+  int switchState = digitalRead(SWITCH_PIN);
+
+  // Verifica se o solo está seco ou úmido
+  if (switchState == LOW) {
+    client.publish(seco_topic, "1");
+  } else {
+    client.publish(umido_topic, "1");
+  }
+
+  delay(5000); // Intervalo de leitura e publicação
+  client.loop();
+}
